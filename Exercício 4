@@ -1,0 +1,44 @@
+<?php
+
+$numeros = array();
+$valor = 0;
+$indice = 0;
+$menor = 0;
+
+for ($i = 0; $i < 5; $i++){
+
+    array_push($numeros, rand(0,10));
+
+}
+
+foreach($numeros as $n){
+   
+    echo "${n} -";
+
+}
+
+echo "<p>";
+
+function acharmenor($numeros){
+
+    $min = min($numeros);    
+    
+    return $min;
+
+}
+
+echo acharmenor($numeros);
+
+echo "<br><br>";
+
+foreach ($numeros as $indice => $valor){
+
+echo "<p>Indice ${indice}, Valor ${valor}</p>";
+
+}
+
+$menor = min($numeros);
+$indice = array_search($menor, $numeros);
+echo "Menor número é de ${menor}, está localizado  no índice ${indice}";
+
+?>
