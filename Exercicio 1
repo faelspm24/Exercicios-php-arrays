@@ -1,0 +1,29 @@
+<?php
+
+$n1 = array();
+$n2 = array();
+$res = array();
+
+for($contador = 0; $contador < 10; $contador++){
+
+    array_push($n1, rand(1, 10));
+    array_push($n2, rand (1, 10));
+    array_push($res, $n1[$contador] + $n2[$contador]);
+}
+
+echo "Primeiros números: ";
+foreach ($n1 as $nu1){
+    echo $nu1 , "-";
+}
+
+echo " Segundos números: ";
+foreach($n2 as $nu2){
+    echo $nu2, "-";
+}
+
+echo " Resultado das somas: ";
+
+foreach($res as $r){
+    echo $r, '-';
+}
+?>
